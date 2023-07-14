@@ -1,0 +1,22 @@
+public class TokoPedia {
+    public static void main(String[] args) {
+        Inventory inventory = new Inventory();
+
+        // Menambahkan data barang ke inventory
+        inventory.addProduct(new Product("Buku Tulis", 5000));
+        inventory.addProduct(new Product("Pensil", 2000));
+        inventory.addProduct(new Product("Penghapus", 1000));
+        inventory.addProduct(new Product("Buku Gambar", 7000));
+        inventory.addProduct(new Product("Pulpen", 3000));
+
+        System.out.println("Inventory sebelum diurutkan:");
+        inventory.displayInventory();
+
+        System.out.println("\nInventory setelah diurutkan berdasarkan harga:");
+        inventory.sortInventory();
+        inventory.displayInventory();
+
+        System.out.println("\nPencarian berdasarkan 'Buku Tulis':");
+        inventory.searchByName("Buku Tulis");
+    }
+}
